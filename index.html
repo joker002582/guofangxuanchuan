@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="校园数码小铺：手机膜19/29元、3C认证充电宝150~300元、充电器、二手手机、驾校报名，价格实在，随时在线，微信 Yoesj2861">
+<title>校园数码小铺 | 手机膜19/29元·充电器·3C充电宝·二手手机·驾校报名</title>
+<style>
+  :root{
+    --brand:#2563eb;
+    --brand-2:#06b6d4;
+    --accent:#ff7a1a;
+    --ink:#0f172a;
+    --ink-2:#475569;
+    --line:#e6e9f0;
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(15,23,42,.08);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:calc(78px + env(safe-area-inset-bottom));
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- 顶部主视觉 ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:38px 20px 46px;
+    color:#fff;
+    background:
+      radial-gradient(700px 340px at 88% -12%, rgba(6,182,212,.42), transparent 65%),
+      radial-gradient(620px 340px at -12% 8%, rgba(37,99,235,.5), transparent 62%),
+      linear-gradient(155deg,#0b1220 0%,#132138 48%,#0d3348 100%);
+  }
+  .hero::after{
+    content:"";
+    position:absolute;left:0;right:0;bottom:0;height:60px;
+    background:linear-gradient(to bottom, rgba(245,247,251,0), var(--bg));
+    pointer-events:none;
+  }
+  .wrap{max-width:960px;margin:0 auto;position:relative;z-index:2}
+  .badge{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:12.5px;letter-spacing:.4px;
+    padding:6px 13px;border-radius:999px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.22);
+    backdrop-filter:blur(6px);
+    color:#dbeafe;
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.22);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+  .hero h1{
+    margin:16px 0 10px;
+    font-size:clamp(26px,6.4vw,40px);
+    line-height:1.28;
+    font-weight:800;
+    letter-spacing:-.5px;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(100deg,#7dd3fc,#67e8f9 45%,#a7f3d0);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.sub{
+    margin:0 0 22px;
+    color:#a9b8cf;
+    font-size:15px;
+    max-width:560px;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+  .chip{
+    font-size:13px;padding:6px 12px;border-radius:999px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.14);
+    color:#e2e8f0;
+  }
+
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    border:0;cursor:pointer;font-family:inherit;
+    font-size:15.5px;font-weight:700;
+    padding:14px 24px;border-radius:14px;
+    transition:transform .16s ease, box-shadow .16s ease, background .16s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(.97)}
+  .btn-primary{
+    color:#08111f;
+    background:linear-gradient(100deg,#67e8f9,#5eead4);
+    box-shadow:0 10px 24px rgba(94,234,212,.28);
+  }
+  .btn-primary:hover{box-shadow:0 14px 30px rgba(94,234,212,.4)}
+  .btn-ghost{
+    color:#e2e8f0;background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+  }
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:44px 20px}
+  .sec-head{max-width:960px;margin:0 auto 24px}
+  .sec-eyebrow{
+    font-size:12.5px;font-weight:800;letter-spacing:2px;
+    color:var(--brand);text-transform:uppercase;margin-bottom:8px;
+  }
+  .sec-head h2{
+    margin:0 0 8px;font-size:clamp(21px,4.6vw,28px);line-height:1.35;letter-spacing:-.3px;
+  }
+  .sec-head p{margin:0;color:var(--ink-2);font-size:14.5px}
+
+  /* ---------- 服务卡片 ---------- */
+  .grid{
+    max-width:960px;margin:0 auto;
+    display:grid;gap:16px;
+    grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(15,23,42,.12);border-color:#d5dbe8}
+  .card .ico{
+    width:52px;height:52px;border-radius:15px;
+    display:grid;place-items:center;font-size:25px;
+    margin-bottom:14px;
+    background:linear-gradient(140deg,#eef4ff,#e0f7fb);
+    border:1px solid #e2ecff;
+  }
+  .card h3{margin:0 0 6px;font-size:17.5px}
+  .card .desc{margin:0 0 14px;font-size:14px;color:var(--ink-2)}
+  .card ul{margin:0 0 16px;padding:0;list-style:none;font-size:13.5px;color:var(--ink-2)}
+  .card ul li{padding-left:18px;position:relative;margin-bottom:5px}
+  .card ul li::before{
+    content:"";position:absolute;left:2px;top:8px;
+    width:6px;height:6px;border-radius:50%;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  }
+  .price{
+    display:inline-flex;align-items:baseline;gap:3px;
+    font-weight:800;color:var(--accent);font-size:15px;
+  }
+  .price b{font-size:23px;letter-spacing:-.5px}
+  .price span{font-size:12px;color:#94a3b8;font-weight:600}
+  .card-foot{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding-top:14px;border-top:1px dashed var(--line);
+  }
+  .mini-btn{
+    border:0;cursor:pointer;font-family:inherit;
+    font-size:13px;font-weight:700;color:#fff;
+    padding:8px 15px;border-radius:10px;
+    background:linear-gradient(100deg,var(--brand),var(--brand-2));
+    transition:opacity .16s ease, transform .16s ease;
+  }
+  .mini-btn:active{transform:scale(.96)}
+  .mini-btn:hover{opacity:.9}
+
+  /* 主推角标 */
+  .tag{
+    position:absolute;top:14px;right:-34px;
+    background:linear-gradient(100deg,#ff7a1a,#ff9f45);
+    color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.5px;
+    padding:5px 40px;transform:rotate(38deg);
+    box-shadow:0 6px 14px rgba(255,122,26,.3);
+  }
+
+  /* 3C 小标签 */
+  .badge-3c{
+    display:inline-flex;align-items:center;gap:4px;
+    font-size:11.5px;font-weight:800;letter-spacing:.3px;
+    color:#0369a1;background:#e0f2fe;
+    border:1px solid #bae6fd;
+    padding:2px 8px;border-radius:6px;
+    vertical-align:middle;margin-left:6px;
+  }
+
+  /* ---------- 驾校横幅 ---------- */
+  .drive{
+    max-width:960px;margin:0 auto;
+    border-radius:26px;
+    padding:30px 24px;
+    color:#fff;
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(500px 240px at 92% 0%, rgba(255,213,128,.35), transparent 62%),
+      radial-gradient(420px 260px at 0% 100%, rgba(56,189,248,.35), transparent 65%),
+      linear-gradient(140deg,#101c33,#17385c 55%,#0d4a5e);
+    box-shadow:0 20px 44px rgba(13,52,80,.28);
+  }
+  .drive h2{margin:0 0 8px;font-size:clamp(21px,4.8vw,29px);line-height:1.35}
+  .drive .lead{margin:0 0 20px;color:#b8cbe3;font-size:14.5px;max-width:600px}
+  .drive-list{
+    display:grid;gap:12px;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    margin-bottom:22px;
+  }
+  .drive-item{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:14px;padding:14px 16px;
+    font-size:14px;color:#e8f1fa;
+    display:flex;gap:10px;align-items:flex-start;
+  }
+  .drive-item .k{font-size:17px;line-height:1.3}
+  .drive-item b{display:block;color:#fff;font-size:14.5px;margin-bottom:2px}
+  .drive-item small{color:#a8bdd6;font-size:12.8px;line-height:1.5}
+
+  /* ---------- 流程 ---------- */
+  .steps{max-width:960px;margin:0 auto;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:16px;
+    padding:18px 18px 16px;box-shadow:var(--shadow);position:relative;
+  }
+  .step .num{
+    width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+    font-size:14px;font-weight:800;color:#fff;margin-bottom:10px;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    box-shadow:0 6px 14px rgba(37,99,235,.28);
+  }
+  .step h4{margin:0 0 4px;font-size:15px}
+  .step p{margin:0;font-size:13.3px;color:var(--ink-2)}
+
+  /* ---------- 承诺 ---------- */
+  .promise{
+    max-width:960px;margin:0 auto;
+    display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  }
+  .p-item{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;
+    text-align:center;box-shadow:var(--shadow);
+  }
+  .p-item .e{font-size:26px;margin-bottom:8px}
+  .p-item b{display:block;font-size:15px;margin-bottom:3px}
+  .p-item span{font-size:13px;color:var(--ink-2)}
+
+  /* ---------- 联系 ---------- */
+  .contact{
+    max-width:960px;margin:0 auto;
+    background:#fff;border:1px solid var(--line);border-radius:24px;
+    padding:30px 22px;text-align:center;box-shadow:var(--shadow);
+  }
+  .contact h2{margin:0 0 8px;font-size:clamp(20px,4.6vw,26px)}
+  .contact p{margin:0 0 20px;color:var(--ink-2);font-size:14.5px}
+  .wx-box{
+    display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;
+    background:linear-gradient(100deg,#f0f9ff,#ecfeff);
+    border:1.5px dashed #93c5fd;border-radius:16px;
+    padding:14px 20px;margin-bottom:18px;
+  }
+  .wx-box .label{font-size:12.5px;color:#64748b;font-weight:700;letter-spacing:.5px}
+  .wx-id{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:20px;font-weight:800;letter-spacing:1.2px;
+    color:#0f172a;
+    user-select:all;-webkit-user-select:all;
+  }
+  .note{font-size:13px;color:#94a3b8;margin:0}
+
+  /* ---------- 底部固定栏 ---------- */
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);
+    box-shadow:0 -6px 22px rgba(15,23,42,.07);
+  }
+  .bar-inner{
+    max-width:960px;margin:0 auto;
+    display:flex;align-items:center;gap:12px;
+  }
+  .bar-info{flex:1;min-width:0}
+  .bar-info .t{font-size:11.5px;color:#94a3b8;font-weight:700;letter-spacing:.6px}
+  .bar-info .v{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:16.5px;font-weight:800;letter-spacing:.8px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .bar .btn{padding:12px 20px;font-size:14.5px;border-radius:12px}
+
+  /* ---------- Toast ---------- */
+  .toast{
+    position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));
+    transform:translate(-50%,14px);
+    background:#0f172a;color:#fff;
+    font-size:14px;font-weight:600;
+    padding:11px 20px;border-radius:12px;
+    box-shadow:0 12px 30px rgba(15,23,42,.3);
+    opacity:0;pointer-events:none;z-index:99;
+    transition:opacity .22s ease, transform .22s ease;
+    white-space:nowrap;max-width:88vw;
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  /* ---------- 入场动画 ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  footer{
+    text-align:center;padding:30px 20px 10px;
+    font-size:12.5px;color:#94a3b8;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== 主视觉 ========== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="badge"><span class="dot"></span>本校校园 · 数码小铺</span>
+
+    <h1>手机膜、充电器、充电宝、<br class="br">二手手机，<span class="grad">还有驾校报名</span></h1>
+
+    <p class="sub">学姐的店不开在商场，就开在你宿舍楼下。<br>价格实在、当面验货、随时微信在线，有问题当天解决。</p>
+
+    <div class="chips">
+      <span class="chip">📱 现场贴膜 19/29 元</span>
+      <span class="chip">⚡ 快充配件</span>
+      <span class="chip">🔋 3C 认证充电宝</span>
+      <span class="chip">📲 二手手机可验机</span>
+      <span class="chip">🚗 学生驾校特惠</span>
+    </div>
+
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="copyWx()">📋 复制微信号，马上找我</button>
+      <a class="btn btn-ghost" href="#services">看看有什么 👀</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== 服务项目 ========== -->
+<section id="services">
+  <div class="sec-head reveal">
+    <div class="sec-eyebrow">Services</div>
+    <h2>这几样，校园里最常用</h2>
+    <p>东西都在手边，随时能看实物，不用等快递、不用担风险。</p>
+  </div>
+
+  <div class="grid">
+    <!-- 手机膜 -->
+    <article class="card reveal">
+      <div class="ico">📱</div>
+      <h3>手机膜 · 现场贴</h3>
+      <p class="desc">高清钢化膜 / 防窥膜 / 磨砂膜 / 镜头膜，主流机型常备货。</p>
+      <ul>
+        <li>高清钢化膜 <b>19 元</b>，防窥 / 磨砂膜 <b>29 元</b></li>
+        <li>贴坏免费重贴，不留气泡</li>
+        <li>防窥膜保护隐私，上课看手机不怕被瞄</li>
+      </ul>
+      <div class="card-foot">
+        <div class="price"><b>19</b><span>/ 29 元 · 张</span></div>
+        <button class="mini-btn" onclick="copyWx()">微信预约</button>
+      </div>
+    </article>
+
+    <!-- 充电器 -->
+    <article class="card reveal">
+      <div class="ico">⚡</div>
+      <h3>充电器 · 数据线</h3>
+      <p class="desc">快充头、Type-C / 苹果线、车载充电器，主流品牌接口齐全。</p>
+      <ul>
+        <li>华为 / 小米 / 苹果 / OPPO / vivo 都能配</li>
+        <li>支持当场插上试充，能充再付钱</li>
+        <li>线材耐用款，宿舍床上躺着充也不容易断</li>
+      </ul>
+      <div class="card-foot">
+        <div class="price"><b>29</b><span>元起 / 套</span></div>
+        <button class="mini-btn" onclick="copyWx()">微信预约</button>
+      </div>
+    </article>
+
+    <!-- 充电宝 -->
+    <article class="card reveal">
+      <div class="ico">🔋</div>
+      <h3>充电宝 · 3C 认证<span class="badge-3c">3C</span></h3>
+      <p class="desc">10000 / 20000mAh 自带线款，全部带 3C 认证，快充输出，宿舍断电、外出实习都不慌。</p>
+      <ul>
+        <li>均有 <b>3C 认证</b>，可现场查标识、试充电</li>
+        <li>容量 / 功率不同，价格 <b>150~300 元</b> 不等</li>
+        <li>自带双线，支持以旧换新 / 短期借用</li>
+      </ul>
+      <div class="card-foot">
+        <div class="price"><b>150~300</b><span>元 / 个</span></div>
+        <button class="mini-btn" onclick="copyWx()">微信预约</button>
+      </div>
+    </article>
+
+    <!-- 二手手机 -->
+    <article class="card reveal">
+      <span class="tag">学生党热门</span>
+      <div class="ico">📲</div>
+      <h3>二手手机 · 可验机</h3>
+      <p class="desc">备用机、主力机都有，成色分级说清楚，不玩文字游戏。</p>
+      <ul>
+        <li>当面验机：电池健康、屏幕、拍照、指纹都试一遍</li>
+        <li>价格透明，成色与报价一一对应</li>
+        <li>支持回收旧机 / 置换补差价</li>
+      </ul>
+      <div class="card-foot">
+        <div class="price"><b>面议</b><span>看机型与成色</span></div>
+        <button class="mini-btn" onclick="copyWx()">问行情</button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== 驾校 ========== -->
+<section style="padding-top:6px">
+  <div class="drive reveal">
+    <div class="sec-eyebrow" style="color:#7dd3fc">驾校报名 · 学生专享</div>
+    <h2>大学四年，把驾照先拿下 🚗</h2>
+    <p class="lead">合作驾校学生通道，价格、班型、接送都提前说清楚，报名不迷路，也不怕被临时加价。</p>
+
+    <div class="drive-list">
+      <div class="drive-item">
+        <span class="k">💰</span>
+        <div><b>学生特惠价</b><small>凭学生证报名，享受合作价，费用明细一次性讲明白</small></div>
+      </div>
+      <div class="drive-item">
+        <span class="k">🚌</span>
+        <div><b>接送 / 就近练车</b><small>按驾校安排提供接送或就近训练场地，节省来回时间</small></div>
+      </div>
+      <div class="drive-item">
+        <span class="k">🗓️</span>
+        <div><b>灵活约车</b><small>没课的时间练，避开考试周，学业练车两不误</small></div>
+      </div>
+      <div class="drive-item">
+        <span class="k">🎁</span>
+        <div><b>报名送福利</b><small>报名成功送手机膜 / 数据线，同学一起报名再加码</small></div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="copyWx()">🚗 加微信问班型与价格</button>
+  </div>
+</section>
+
+<!-- ========== 流程 ========== -->
+<section>
+  <div class="sec-head reveal">
+    <div class="sec-eyebrow">How it works</div>
+    <h2>怎么找我？四步就好</h2>
+    <p>不用下载 App、不用下单付款，微信说一声就行。</p>
+  </div>
+
+  <div class="steps">
+    <div class="step reveal">
+      <div class="num">1</div>
+      <h4>加微信</h4>
+      <p>微信号 <b>Yoesj2861</b>，备注“同学”通过更快。</p>
+    </div>
+    <div class="step reveal">
+      <div class="num">2</div>
+      <h4>说需求</h4>
+      <p>机型、要什么膜/配件，或者想找什么价位的手机。</p>
+    </div>
+    <div class="step reveal">
+      <div class="num">3</div>
+      <h4>约时间地点</h4>
+      <p>宿舍楼下、食堂门口、教学楼，方便你的时候见。</p>
+    </div>
+    <div class="step reveal">
+      <div class="num">4</div>
+      <h4>当面验货付款</h4>
+      <p>看得见摸得着，满意再付，售后随时微信找我。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 承诺 ========== -->
+<section style="padding-top:6px">
+  <div class="sec-head reveal">
+    <div class="sec-eyebrow">Promise</div>
+    <h2>为什么愿意找我</h2>
+  </div>
+  <div class="promise">
+    <div class="p-item reveal">
+      <div class="e">🏫</div>
+      <b>就在校内</b>
+      <span>同校同学，跑不掉也躲不掉，售后有保障</span>
+    </div>
+    <div class="p-item reveal">
+      <div class="e">🤝</div>
+      <b>先看后买</b>
+      <span>配件可试充、手机可验机，不合适不勉强</span>
+    </div>
+    <div class="p-item reveal">
+      <div class="e">💬</div>
+      <b>价格说清楚</b>
+      <span>不搞低价引流再临时加价那一套</span>
+    </div>
+    <div class="p-item reveal">
+      <div class="e">⏰</div>
+      <b>随时在线</b>
+      <span>白天上课，晚上和周末随时回消息</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 联系方式 ========== -->
+<section style="padding-top:6px">
+  <div class="contact reveal">
+    <h2>有事微信说，看到就回 👋</h2>
+    <p>贴膜、配件、二手手机、驾校报名，都在这一个微信号上。</p>
+
+    <div class="wx-box">
+      <div>
+        <div class="label">微信号</div>
+        <div class="wx-id" id="wxId">Yoesj2861</div>
+      </div>
+      <button class="mini-btn" style="padding:11px 18px;font-size:14px" onclick="copyWx()">复制</button>
+    </div>
+
+    <p class="note">加好友时备注「同学」，通过更快 ✅</p>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> 校园数码小铺 · 校园服务，诚信经营<br>
+  微信：Yoesj2861
+</footer>
+
+<!-- ========== 底部固定栏 ========== -->
+<div class="bar">
+  <div class="bar-inner">
+    <div class="bar-info">
+      <div class="t">微信号</div>
+      <div class="v">Yoesj2861</div>
+    </div>
+    <button class="btn btn-primary" onclick="copyWx()">一键复制微信</button>
+  </div>
+</div>
+
+<!-- ========== Toast ========== -->
+<div class="toast" id="toast">微信号已复制：Yoesj2861</div>
+
+<script>
+  const WX_ID = 'Yoesj2861';
+
+  /* ---------- 复制微信号 ---------- */
+  function copyWx(){
+    const fallback = () => {
+      const ta = document.createElement('textarea');
+      ta.value = WX_ID;
+      ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch(e) { ok = false; }
+      document.body.removeChild(ta);
+      ok ? toast('微信号已复制：' + WX_ID + ' ✅')
+         : toast('请手动复制：' + WX_ID);
+    };
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(WX_ID)
+        .then(() => toast('微信号已复制：' + WX_ID + ' ✅'))
+        .catch(fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  /* ---------- Toast ---------- */
+  let toastTimer = null;
+  function toast(msg){
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('show'), 2200);
+  }
+
+  /* ---------- 滚动入场 ---------- */
+  (function(){
+    const items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(i => i.classList.add('in'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, idx) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          setTimeout(() => el.classList.add('in'), idx * 70);
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(i => io.observe(i));
+  })();
+
+  /* ---------- 年份 ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
